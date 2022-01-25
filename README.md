@@ -1,1 +1,2 @@
-# KseniyaSokolovskaya-christmas-task-React-typescript-
+# christmas-task-React-typescript 
+# https://christmas-tasks.netlify.app/
