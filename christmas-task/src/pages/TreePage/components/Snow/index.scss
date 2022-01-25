@@ -1,0 +1,13 @@
+.snow {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 0 10px;
+  background-image: url('/assets/svg/snowflake.svg');
+  background-size: cover;
+  cursor: pointer;
+
+  &.mute {
+    opacity: 0.8;
+  }
+}

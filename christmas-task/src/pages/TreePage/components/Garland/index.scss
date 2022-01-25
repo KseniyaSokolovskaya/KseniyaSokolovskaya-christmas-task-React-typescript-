@@ -1,0 +1,203 @@
+.garland-purple {
+  .garland-item {
+    background: purple;
+  }
+}
+.garland-yellow {
+  .garland-item {
+    background: yellow;
+  }
+}
+.garland-orange {
+  .garland-item {
+    background: rgb(255, 115, 0);
+  }
+}
+.garland-red {
+  .garland-item {
+    background: red;
+  }
+}
+.garland-blue {
+  .garland-item {
+    background: rgb(0, 140, 255);
+  }
+}
+
+.garland-none {
+  display: none;
+}
+
+.garland-line {
+  position: absolute;
+  top: 45px;
+  left: 180px;
+  padding: 0;
+  transform: rotate(20deg);
+
+  .garland-item {
+    position: relative;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 0px 4.66667px 24px 3px;
+
+    animation-name: flash-1;
+    animation-duration: 0.8s;
+
+    &:nth-child(3n + 1) {
+      animation-name: flash-1;
+      animation-duration: 0.8s;
+    }
+    &:nth-child(3n + 2) {
+      animation-name: flash-2;
+      animation-duration: 0.8s;
+    }
+    &:nth-child(3n + 3) {
+      animation-name: flash-3;
+      animation-duration: 0.8s;
+    }
+
+    &:after {
+      content: '';
+      top: -10px;
+      left: 10px;
+      position: absolute;
+      width: 25px;
+      height: 20px;
+      border-bottom: solid #182828 2px;
+      border-radius: 50%;
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  &-1 {
+    top: 95px;
+    left: 150px;
+  }
+  &-2 {
+    top: 190px;
+    left: 120px;
+  }
+  &-3 {
+    top: 260px;
+    left: 100px;
+  }
+  &-4 {
+    top: 335px;
+    left: 105px;
+  }
+  &-5 {
+    top: 420px;
+    left: 60px;
+  }
+  &-6 {
+    top: 500px;
+    left: 80px;
+  }
+}
+
+.garland-multicolor {
+  .garland-item {
+    &:nth-child(3n + 1) {
+      animation-name: flash-4;
+      animation-duration: 0.8s;
+    }
+    &:nth-child(3n + 2) {
+      animation-name: flash-5;
+      animation-duration: 0.8s;
+    }
+    &:nth-child(3n + 3) {
+      animation-name: flash-6;
+      animation-duration: 0.8s;
+    }
+  }
+}
+
+@keyframes flash-1 {
+  0%,
+  100% {
+    opacity: 0.3;
+    box-shadow: 0px 4.66667px 24px 3px rgba(0, 0, 0, 0.219);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0px 4.66667px 24px 3px rgb(0, 0, 0);
+  }
+}
+
+@keyframes flash-2 {
+  0%,
+  100% {
+    opacity: 0.3;
+    box-shadow: 0px 4.66667px 24px 3px rgb(255, 255, 255);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0px 4.66667px 24px 3px rgba(255, 255, 255, 0.247);
+  }
+}
+
+@keyframes flash-3 {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0px 4.66667px 24px 3px rgba(255, 255, 255, 0.658);
+  }
+  50% {
+    opacity: 0.3;
+    box-shadow: 0px 4.66667px 24px 3px rgb(255, 255, 255);
+  }
+}
+@keyframes flash-4 {
+  0%,
+  100% {
+    background-color: red;
+    opacity: 0.3;
+    box-shadow: 0px 4.66667px 24px 3px rgba(255, 255, 255, 0.658);
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.644);
+    opacity: 1;
+    box-shadow: 0px 4.66667px 24px 3px rgb(255, 255, 255);
+  }
+}
+
+@keyframes flash-5 {
+  0%,
+  100% {
+    background-color: purple;
+    opacity: 1;
+    box-shadow: 0px 4.66667px 24px 3px rgb(255, 255, 255);
+  }
+  50% {
+    background-color: rgba(128, 0, 128, 0.507);
+    opacity: 1;
+    box-shadow: 0px 4.66667px 24px 3px rgba(255, 255, 255, 0.658);
+  }
+}
+
+@keyframes flash-6 {
+  0%,
+  100% {
+    background-color: yellow;
+    opacity: 1;
+    box-shadow: 0px 4.66667px 24px 3px rgba(255, 255, 255, 0.658);
+  }
+  50% {
+    background-color: rgba(255, 255, 0, 0.411);
+    opacity: 0.3;
+    box-shadow: 0px 4.66667px 24px 3px rgb(255, 255, 255);
+  }
+}

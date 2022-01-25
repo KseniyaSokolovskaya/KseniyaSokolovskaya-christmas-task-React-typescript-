@@ -1,0 +1,47 @@
+.menu-item {
+  list-style-type: none;
+  width: 45px;
+  height: 45px;
+  margin: 3px;
+  padding: 0;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: contain;
+  background-position: center;
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.911);
+  }
+
+  &.background {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    border-radius: 5px;
+  }
+  &.garland {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+
+    &[data-color='multicolor'] {
+      background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8);
+    }
+
+    &[data-color='none'] {
+      width: 0;
+      height: 0;
+      border: none;
+
+      &:after {
+        content: 'Выкл';
+        color: rgba(255, 255, 255, 0.493);
+        font-size: 18px;
+        width: 100px;
+        height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.cards-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+
+  & > * {
+    transform-origin: left top;
+  }
+}

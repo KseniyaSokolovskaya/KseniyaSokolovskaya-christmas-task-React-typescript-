@@ -1,0 +1,14 @@
+.sound {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  display: inline-block;
+  background-image: url('/assets/svg/audio.svg');
+  background-size: cover;
+  cursor: pointer;
+
+  &.mute {
+    opacity: 0.8;
+    background-image: url('/assets/svg/mute.svg');
+  }
+}

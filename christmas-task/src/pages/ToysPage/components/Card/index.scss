@@ -1,0 +1,89 @@
+.card {
+  width: calc(25% - 20px);
+  border: 3px solid rgb(40, 85, 81);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgba(25, 47, 45, 0.8);
+
+  @media (max-width: 1024px) {
+    width: calc(33.3% - 10px);
+    margin-bottom: 10px;
+  }
+  @media (max-width: 770px) {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+  @media (max-width: 520px) {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  &-image {
+    width: 30%;
+  }
+
+  &-title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  &-description {
+    font-size: 18px;
+    line-height: 12px;
+  }
+
+  .favorite {
+    position: absolute;
+    bottom: 50px;
+    width: 90px;
+    height: 35px;
+    background: rgb(46, 109, 104);
+    left: -8px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-bottom: 8px solid #14455b;
+      border-left: 8px solid transparent;
+      top: -8px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-top: 20px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid rgb(46, 109, 104);
+      right: -15px;
+    }
+  }
+  .favorite.active {
+    background: #cbb77a;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-top: 20px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid #cbb77a;
+      right: -15px;
+    }
+  }
+}

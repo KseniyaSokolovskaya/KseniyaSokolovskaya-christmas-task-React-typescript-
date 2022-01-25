@@ -1,0 +1,23 @@
+.header {
+  height: 80px;
+
+  .nav {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  .nav-link {
+    display: block;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    &.active {
+      border-bottom: 3px solid #fff;
+    }
+  }
+}

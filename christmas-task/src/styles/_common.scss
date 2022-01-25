@@ -1,0 +1,50 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.app {
+  height: 100%;
+}
+
+body {
+  font: 400 14px $font-primary;
+  color: $txt-base-color;
+  background-color: $bg-main-color;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #8080a1;
+}

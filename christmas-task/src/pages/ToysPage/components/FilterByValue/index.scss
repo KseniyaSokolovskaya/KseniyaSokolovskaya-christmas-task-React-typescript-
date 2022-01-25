@@ -1,0 +1,122 @@
+.filter-form {
+  width: calc(33% - 5px);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: rgba(25, 47, 45, 0.5);
+
+  .filter-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .line-title {
+    margin-right: 10px;
+  }
+
+  .label {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 5px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      color: goldenrod;
+      position: absolute;
+      top: -3%;
+      font-size: 30px;
+      left: 20%;
+      width: 30px;
+      height: 30px;
+    }
+
+    &-shape {
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &-1 {
+        background-image: url('/assets/svg/bell.svg');
+      }
+      &-2 {
+        background-image: url('/assets/svg/ball.svg');
+      }
+      &-3 {
+        background-image: url('/assets/svg/cone.svg');
+      }
+      &-4 {
+        background-image: url('/assets/svg/snowflake.svg');
+      }
+      &-5 {
+        background-image: url('/assets/svg/toy.svg');
+      }
+    }
+
+    &-color {
+      border: none;
+      &-1 {
+        background-color: white;
+      }
+      &-2 {
+        background-color: yellow;
+      }
+      &-3 {
+        background-color: red;
+      }
+      &-4 {
+        background-color: blue;
+      }
+      &-5 {
+        background-color: green;
+      }
+    }
+    &-size {
+      border: none;
+      background-size: cover;
+      background-image: url('assets/svg/ball.svg');
+      &-1 {
+        width: 40px;
+        height: 40px;
+      }
+      &-2 {
+        width: 35px;
+        height: 35px;
+      }
+      &-3 {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &-favorite {
+      border: none;
+      background-color: white;
+    }
+  }
+
+  .shape-input[value='1']:checked + .label:before,
+  .shape-input[value='2']:checked + .label:before,
+  .shape-input[value='3']:checked + .label::before,
+  .shape-input[value='4']:checked + .label::before,
+  .shape-input[value='5']:checked + .label::before,
+  .size-input[value='1']:checked + .label::before,
+  .size-input[value='2']:checked + .label::before,
+  .size-input[value='3']:checked + .label::before,
+  .color-input[value='1']:checked + .label::before,
+  .color-input[value='2']:checked + .label::before,
+  .color-input[value='3']:checked + .label::before,
+  .color-input[value='4']:checked + .label::before,
+  .color-input[value='5']:checked + .label::before,
+  .favorite-input:checked + .label::before {
+    content: '\2713';
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+}

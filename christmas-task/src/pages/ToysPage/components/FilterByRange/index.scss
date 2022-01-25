@@ -1,0 +1,27 @@
+.filter-range {
+  width: calc(33% - 5px);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: rgba(25, 47, 45, 0.5);
+
+  .slider-range-count,
+  .slider-range-year {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .start-value,
+  .end-value {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    background-color: #285551;
+    border-radius: 10px;
+    height: 30px;
+  }
+}
